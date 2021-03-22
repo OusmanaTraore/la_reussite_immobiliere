@@ -1,18 +1,51 @@
-<ion-header [translucent]="true">
+
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-a Réussite Immobilière     </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<ion-content>
+  <h1>
+
+    <strong>La Réussite Immobilière</strong>
+  </h1>
+   
+    <p> Votre application  de recherche Immobilière  à Nouakchott</p>
+
+<div class="image">
+  <img src="assets/images/logo2.png" alt="logo">
+  
+</div>
+
+<!-- <form action="">
+ <fieldset>
+   <legend>Galeries</legend> -->
+   <ion-grid>
+     <ion-row>
+       <ion-col size="12">
+         
+         <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav
+         (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+         <ion-slide *ngFor="let s of sliderOne.slidesItems">
+            <img  src="assets/slider/{{s.id}}.jpg">
+            <span class="slide-text">{{s.name}}</span>
+          </ion-slide>
+        </ion-slides>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+ <!-- </fieldset> 
+</form> -->
+
+  
+  <form >
+    
+      <ion-button expand="block" shape="round" routerLink="/inscription">Inscription</ion-button>
+    <ion-button expand="block" shape="round"  routerLink="/connexion" >Connexion</ion-button>
+    <ion-button expand="block" shape="round" routerLink="/devise">Devise</ion-button>
+  </form>
+  </ion-content>
+

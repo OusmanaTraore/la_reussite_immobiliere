@@ -1,0 +1,19 @@
+# compiled output
+/dist
+/tmp
+/DossierOriginal
+.env
+# dependencies
+/node_modules
+package-lock.json
+user.json
+#tes
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+

@@ -1,0 +1,7 @@
+{
+  "name": "reussite_immobiliere",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

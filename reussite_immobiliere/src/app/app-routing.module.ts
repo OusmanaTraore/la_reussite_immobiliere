@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'slider',
     loadChildren: () => import('./slider/slider.module').then( m => m.SliderPageModule)
   },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
 ];
 
 @NgModule({

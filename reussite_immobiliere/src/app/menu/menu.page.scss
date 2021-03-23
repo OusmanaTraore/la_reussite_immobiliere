@@ -1,0 +1,41 @@
+ion-header{
+    ion-toolbar{
+        ion-button{
+            
+            position:fixed;
+            left: 75px;
+            top: 10px;
+            right: 75px;
+            
+    }
+}
+}
+
+ion-content{
+    ion-segment{
+        position:fixed;
+        left: 0;
+        bottom: 40px;
+        right: 0;
+        ion-segment-button{
+            margin: 0%;
+            ion-label{
+                font-size: 12px;
+            }
+        }
+    }
+  div{
+      padding: 15px;
+      position:fixed;
+      left: 45px;
+      bottom: 200px;
+      right: 45px;
+        ion-list{
+         
+          ion-button{
+         margin: 15px;
+         
+        }
+    }
+}
+}

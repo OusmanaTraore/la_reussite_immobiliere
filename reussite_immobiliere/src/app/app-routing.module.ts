@@ -19,6 +19,18 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'membre',
+    loadChildren: () => import('./membre/membre.module').then( m => m.MembrePageModule)
+  },
+  {
+    path: 'public',
+    loadChildren: () => import('./public/public.module').then( m => m.PublicPageModule)
+  },
 ];
 
 @NgModule({

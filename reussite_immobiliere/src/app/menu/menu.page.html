@@ -1,0 +1,90 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title size="small">Ionic Segments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-segment color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable>
+    <ion-segment-button value="deposit" checked>
+      <ion-label>Deposit</ion-label>
+      <ion-icon name="cash"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="loan">
+      <ion-label>Loan</ion-label>
+      <ion-icon name="log-out"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+<div [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'deposit'">
+      <ion-item *ngFor="let item of [].constructor(20); let i = index">
+        <ion-thumbnail slot="start">
+          <img src="https://avatars.io/instagram/unknown">
+        </ion-thumbnail>
+        <h6>Deposit - {{ i }}</h6>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'loan'">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://avatars.io/instagram/unknown">
+        </ion-thumbnail>
+        <h6>Loan 2</h6>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-button size="small" expand="block"  fill="outline" shape="round" >La Réussite Immobilière </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+  <ion-segment color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable>
+    <ion-segment-button value="utilisateurs" checked>
+      <ion-label>Utilisateurs</ion-label>
+      <ion-icon name="people-circle-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="contact">
+      <ion-label>Contact</ion-label>
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="faq">
+      <ion-label>Faq</ion-label>
+      <ion-icon name="help"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="home">
+      <ion-label>Home</ion-label>
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+<div [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'utilisateurs'">
+        <ion-button *ngFor="let item of mode "
+        expand="full"  fill="outline" shape="round" (click)="Mode()">
+          {{ item }}
+        </ion-button>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'contact'">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://avatars.io/instagram/unknown">
+        </ion-thumbnail>
+        <h6>Contact</h6>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'faq'">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://avatars.io/instagram/unknown">
+        </ion-thumbnail>
+        <h6>FAQ</h6>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

@@ -9,9 +9,12 @@ import { Router } from '@angular/router';
 export class MenuPage implements OnInit {
 
   type: string;
-  mode:string[]=['Admin','Membres',"Public"];
-  constructor(private route:Router) { }
+  item:any;
+  public mode:Array<string>=['Admin','Membres',"Public"];
 
+  
+  constructor(private route:Router) { }
+  
   ngOnInit() {
     this.type = 'utilisateurs';
     
@@ -19,16 +22,30 @@ export class MenuPage implements OnInit {
   segmentChanged(ev:any){
     console.log('Segment changed',ev);
   }
-  Mode(){
-    // let mode = this.mode;
-    // switch(mode){
-    //   case Admin:{
-    //     break;
-    //   }
-    // }
-    this.route.navigate(['/admin']);
-    // this.route.navigate(['/membres']);
-    // this.route.navigate(['/public']);
+  Mode(item){
+    console.log(`Ce mode est ${item}`);
+    // console.log(`Ce mode est ${this.mode[0]}`);
+    // console.log(`Ce mode est ${this.mode[1]}`);
+    // console.log(`Ce mode est ${this.mode[2]}`);
+//     this.mode=
+//     ['Admin','Membres',"Public"];
+//  let mode = this.mode;
+//           switch(mode){
+//             case mode:
+//               this.route.navigateByUrl('admin');
+//               break;
+              
+//             case this.mode[0]:
+//               this.route.navigateByUrl('membre');
+//               break;
+              
+//             case mode[2]:
+//               this.route.navigateByUrl('public');
+//               break;
+      
+              
+//             }
+          
 
   }
 }

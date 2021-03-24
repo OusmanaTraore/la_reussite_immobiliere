@@ -56,16 +56,16 @@
       <ion-label>Faq</ion-label>
       <ion-icon name="help"></ion-icon>
     </ion-segment-button>
-    <ion-segment-button value="home">
+    <ion-segment-button value="home" routerLink='/home'>
       <ion-label>Home</ion-label>
-      <ion-icon name="home"></ion-icon>
+      <ion-icon name="home" ></ion-icon>
     </ion-segment-button>
   </ion-segment>
 
 <div [ngSwitch]="type">
     <ion-list *ngSwitchCase="'utilisateurs'">
         <ion-button *ngFor="let item of mode "
-        expand="full"  fill="outline" shape="round" (click)="Mode()">
+        expand="full"  fill="outline" shape="round" [(click)]="Mode(item)" [(ngModel)]="item">
           {{ item }}
         </ion-button>
     </ion-list>

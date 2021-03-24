@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonSlides } from '@ionic/angular';
 
 @Component({
@@ -9,7 +10,7 @@ import { IonSlides } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+type:any;
   @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
   @ViewChild('slideWithNav2', { static: false }) slideWithNav2: IonSlides;
   @ViewChild('slideWithNav3', { static: false }) slideWithNav3: IonSlides;
@@ -37,7 +38,7 @@ export class HomePage {
     slidesPerView: 3
   };
 
-  constructor() {
+  constructor(private route:Router) {
      //Item object for Nature
      this.sliderOne =
      {
@@ -88,53 +89,15 @@ export class HomePage {
          
        ]
      };
-     //Item object for Food
-    //  this.sliderTwo =
-    //  {
-    //    isBeginningSlide: true,
-    //    isEndSlide: false,
-    //    slidesItems: [
-    //      {
-    //        id: 324
-    //      },
-    //      {
-    //        id: 321
-    //      },
-    //      {
-    //        id: 435
-    //      },
-    //      {
-    //        id: 524
-    //      },
-    //      {
-    //        id: 235
-    //      }
-    //    ]
-    //  };
-     //Item object for Fashion
-    //  this.sliderThree =
-    //  {
-    //    isBeginningSlide: true,
-    //    isEndSlide: false,
-    //    slidesItems: [
-    //      {
-    //        id: 643
-    //      },
-    //      {
-    //        id: 532
-    //      },
-    //      {
-    //        id: 232
-    //      },
-    //      {
-    //        id: 874
-    //      },
-    //      {
-    //        id: 193
-    //      }
-    //    ]
-    //  };
    }
+  //  ngOnInit() {
+  //   this.type = 'utilisateurs';
+    
+  // }
+  Menu(){
+    this.route.navigate(['/menu'])
+    // this.type = 'utilisateurs';
+  }
  
    //Move to Next slide
    slideNext(object, slideView) {

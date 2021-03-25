@@ -1,41 +1,3 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title size="small">Ionic Segments</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class="ion-padding">
-  <ion-segment color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable>
-    <ion-segment-button value="deposit" checked>
-      <ion-label>Deposit</ion-label>
-      <ion-icon name="cash"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button value="loan">
-      <ion-label>Loan</ion-label>
-      <ion-icon name="log-out"></ion-icon>
-    </ion-segment-button>
-  </ion-segment>
-
-<div [ngSwitch]="type">
-    <ion-list *ngSwitchCase="'deposit'">
-      <ion-item *ngFor="let item of [].constructor(20); let i = index">
-        <ion-thumbnail slot="start">
-          <img src="https://avatars.io/instagram/unknown">
-        </ion-thumbnail>
-        <h6>Deposit - {{ i }}</h6>
-      </ion-item>
-    </ion-list>
-
-    <ion-list *ngSwitchCase="'loan'">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img src="https://avatars.io/instagram/unknown">
-        </ion-thumbnail>
-        <h6>Loan 2</h6>
-      </ion-item>
-    </ion-list>
-  </div>
-</ion-content> -->
 <ion-header>
   <ion-toolbar>
     <ion-button size="small" expand="block"  fill="outline" shape="round" >La Réussite Immobilière </ion-button>
@@ -62,22 +24,97 @@
     </ion-segment-button>
   </ion-segment>
 
-<div [ngSwitch]="type">
-    <ion-list *ngSwitchCase="'utilisateurs'">
-        <ion-button *ngFor="let item of mode "
-        expand="full"  fill="outline" shape="round" [(click)]="Mode(item)" [(ngModel)]="item">
+  <div [ngSwitch]="type">
+    <ion-list class="utilisateurs" *ngSwitchCase="'utilisateurs'">
+      <ion-button *ngFor="let item of mode "
+      expand="full"  fill="outline" shape="round" 
+      (click)="Mode(item)" 
+         >
           {{ item }}
         </ion-button>
     </ion-list>
-
-    <ion-list *ngSwitchCase="'contact'">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <img src="https://avatars.io/instagram/unknown">
-        </ion-thumbnail>
-        <h6>Contact</h6>
-      </ion-item>
+    <ion-list class="contact" *ngSwitchCase="'contact'">
+      <ion-card *ngFor="let item of admin ">
+        <ion-card-header >
+          <ion-item>
+            <ion-card-title> 
+              {{item.role}}  
+            </ion-card-title>
+          </ion-item>
+        </ion-card-header>
+        <ion-item>
+            
+            <ion-button size="small" expand="block"  fill="outline" shape="round">
+              {{item.prenom}} &nbsp;
+              {{item.nom}} 
+              
+            </ion-button>
+          </ion-item>
+          <ion-card-content>
+            <ion-item>
+              <ion-icon name="mail"></ion-icon>
+              <ion-label >{{item.email}}</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="call"></ion-icon>
+              <ion-label>{{item.telephone}}</ion-label>
+            </ion-item>
+          </ion-card-content>
+      
+        </ion-card>
     </ion-list>
+            <!-- 
+
+         <ion-label>
+           <h3>
+          </h3>
+        </ion-label>
+      <ion-footer>
+        <h3>Matricule:
+          {{item.matricule}}
+          
+        </h3>
+      </ion-footer>  -->
+        <!-- <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../assets/slider/adrar.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h3>Aissata Ba</h3>
+            <p>Dec 10, 2019</p>
+          </ion-label>
+        </ion-item>
+      
+        <img src="../../assets/slider/carteMauritanie.jpg" alt="ion">
+        <ion-card-header>
+          <ion-card-title>Hotel Panama Garden</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis mollis ligula sed ultrices.
+        </ion-card-content>
+      
+        <ion-footer>
+          <ion-row>
+            <ion-col center text-center>
+              <button>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>1.5k Likes</div>
+              </button>
+            </ion-col>
+            <ion-col center text-center>
+              <button>
+                <ion-icon name="text"></ion-icon>
+                <div>4 Comments</div>
+              </button>
+            </ion-col>
+            <ion-col center text-center>
+              <button>
+                <ion-icon name="time"></ion-icon>
+                <div>11h ago</div>
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-footer> -->
     <ion-list *ngSwitchCase="'faq'">
       <ion-item>
         <ion-thumbnail slot="start">

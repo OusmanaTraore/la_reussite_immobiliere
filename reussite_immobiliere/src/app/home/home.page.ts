@@ -10,7 +10,6 @@ import { IonSlides } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-type:any;
   @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
   @ViewChild('slideWithNav2', { static: false }) slideWithNav2: IonSlides;
   @ViewChild('slideWithNav3', { static: false }) slideWithNav3: IonSlides;
@@ -90,13 +89,10 @@ type:any;
        ]
      };
    }
-  //  ngOnInit() {
-  //   this.type = 'utilisateurs';
-    
-  // }
+
   Menu(){
     this.route.navigate(['/menu'])
-    // this.type = 'utilisateurs';
+    
   }
  
    //Move to Next slide

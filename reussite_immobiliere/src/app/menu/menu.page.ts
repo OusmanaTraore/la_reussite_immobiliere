@@ -10,10 +10,39 @@ export class MenuPage implements OnInit {
 
   type: string;
   item:any;
+  public admin:any=[
+    {
+      nom:'Bâ',
+      prenom:'Aissata',
+      matricule:'207-AA-312',
+      email:'aissat@yahoo.fr',
+      telephone: '243-76-98-37',
+      role:'ADMINISTRATEUR'
+    },
+    {
+      nom:'Ndoudy Elys',
+      prenom:'Patrick',
+      matricule:'207-AA-318',
+      email:"patric@yahoo.fr",
+      telephone: '243-76-98-38',
+      role:'ADMINISTRATEUR'
+    },
+    {
+      nom:"Strerg",
+      prenom:'Marc',
+      matricule:'207-AA-318',
+      email:"marc@yahoo.fr",
+      telephone: '243-76-98-39',
+      role:'ADMINISTRATEUR'
+    }
+  ];
   public mode:Array<string>=['Admin','Membres',"Public"];
 
   
-  constructor(private route:Router) { }
+  constructor(private route:Router) { 
+    this.type ='utilisateurs';
+
+  }
   
   ngOnInit() {
     this.type = 'utilisateurs';
@@ -24,27 +53,20 @@ export class MenuPage implements OnInit {
   }
   Mode(item){
     console.log(`Ce mode est ${item}`);
-    // console.log(`Ce mode est ${this.mode[0]}`);
-    // console.log(`Ce mode est ${this.mode[1]}`);
-    // console.log(`Ce mode est ${this.mode[2]}`);
-//     this.mode=
-//     ['Admin','Membres',"Public"];
-//  let mode = this.mode;
-//           switch(mode){
-//             case mode:
-//               this.route.navigateByUrl('admin');
-//               break;
-              
-//             case this.mode[0]:
-//               this.route.navigateByUrl('membre');
-//               break;
-              
-//             case mode[2]:
-//               this.route.navigateByUrl('public');
-//               break;
-      
-              
-//             }
+     switch(item){
+       case item="Admin":
+         this.route.navigateByUrl('admin');
+         break;
+       case item="Membres":
+          this.route.navigateByUrl('membre');
+          break;
+        case item="Public":
+           this.route.navigateByUrl('public');
+           break;
+        default:
+          this.route.navigateByUrl('menu');
+
+     }
           
 
   }
